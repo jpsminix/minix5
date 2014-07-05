@@ -1,0 +1,1 @@
+cmd_drivers/net/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/built-in.o drivers/net/mii.o drivers/net/phy/built-in.o drivers/net/Space.o drivers/net/loopback.o drivers/net/rk29_vmac.o drivers/net/macvlan.o drivers/net/tun.o drivers/net/veth.o drivers/net/smsc911x.o drivers/net/arm/built-in.o drivers/net/wireless/built-in.o drivers/net/eth_mac/built-in.o 

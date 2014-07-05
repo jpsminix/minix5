@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/built-in.o drivers/net/wireless/wifi_sys/rkwifi_sys_iface.o drivers/net/wireless/bcm4329/built-in.o 

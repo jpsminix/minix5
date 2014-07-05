@@ -1,0 +1,1 @@
+cmd_drivers/regulator/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/regulator/built-in.o drivers/regulator/core.o drivers/regulator/dummy.o drivers/regulator/wm831x-dcdc.o drivers/regulator/wm831x-isink.o drivers/regulator/wm831x-ldo.o drivers/regulator/rk30-pwm-regulator.o 
