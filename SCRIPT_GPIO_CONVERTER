@@ -1,0 +1,14 @@
+#!/bin/sh
+
+gpio_num=$1
+
+gpio_off=`expr $gpio_num  - 160`
+gpio_bank=`expr $gpio_off / 32`
+gpio_goff=`expr $gpio_off % 32`
+gpio_goff=`expr $gpio_goff / 8`
+gpio_off=`expr $gpio_off % 32`
+gpio_off=`expr $gpio_off % 8`
+gpio_goff=`echo -n $gpio_goff | $b sed -e 's/0/A/' -e 's/1/B/' -e 's/2/C/' -e 's/3/D/'`
+echo -n "$gpio_num: RK30_PIN$gpio_bank"_"P$gpio_goff$gpio_off = \n"
+
+exit
