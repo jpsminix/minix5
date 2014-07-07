@@ -16,7 +16,7 @@ static struct rk29_keys_button key_button[] = {
 		.code_long_press = EV_ENCALL,
 		.wakeup	= 1,
 	},
-	{
+/*	{
 		.desc	= "brightness down",//"menu",
 		.code	= KEY_BRIGHTNESSDOWN,//KEY_F22,//EV_MENU,
 		.adc_value	= 155,
@@ -43,7 +43,7 @@ static struct rk29_keys_button key_button[] = {
 		.adc_value	= 495,
 		.gpio = INVALID_GPIO,
 		.active_low = PRESS_LEV_LOW,
-	},
+	},*/
 };
 struct rk29_keys_platform_data rk29_keys_pdata = {
 	.buttons	= key_button,
