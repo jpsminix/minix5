@@ -1,4 +1,4 @@
-cmd_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := arm-linux-gnueabi-gcc -Wp,-MD,drivers/usb/dwc_otg/.dwc_otg_cil_intr.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabi/4.6/include -I/root/linux-jps/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-rk30/include -Iarch/arm/plat-rk/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -fno-dwarf2-cfi-asm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO -DDWC_HOST_ONLY    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(dwc_otg_cil_intr)"  -D"KBUILD_MODNAME=KBUILD_STR(dwc_otg)" -c -o drivers/usb/dwc_otg/dwc_otg_cil_intr.o drivers/usb/dwc_otg/dwc_otg_cil_intr.c
+cmd_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := arm-linux-gnueabi-gcc -Wp,-MD,drivers/usb/dwc_otg/.dwc_otg_cil_intr.o.d  -nostdinc -isystem /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include -I/home/control/minix5/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-rk30/include -Iarch/arm/plat-rk/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -fno-dwarf2-cfi-asm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(dwc_otg_cil_intr)"  -D"KBUILD_MODNAME=KBUILD_STR(dwc_otg)" -c -o drivers/usb/dwc_otg/dwc_otg_cil_intr.o drivers/usb/dwc_otg/dwc_otg_cil_intr.c
 
 source_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := drivers/usb/dwc_otg/dwc_otg_cil_intr.c
 
@@ -28,13 +28,13 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/arch/dma/addr/t/64bit.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
     $(wildcard include/config/64bit.h) \
-  /root/linux-jps/arch/arm/include/asm/types.h \
+  /home/control/minix5/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
-  /root/linux-jps/arch/arm/include/asm/bitsperlong.h \
+  /home/control/minix5/arch/arm/include/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/linux/posix_types.h \
   include/linux/stddef.h \
-  /root/linux-jps/arch/arm/include/asm/posix_types.h \
+  /home/control/minix5/arch/arm/include/asm/posix_types.h \
   include/linux/kobject.h \
     $(wildcard include/config/hotplug.h) \
   include/linux/list.h \
@@ -46,7 +46,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/debug/lock/alloc.h) \
     $(wildcard include/config/sysfs.h) \
   include/linux/errno.h \
-  /root/linux-jps/arch/arm/include/asm/errno.h \
+  /home/control/minix5/arch/arm/include/asm/errno.h \
   include/asm-generic/errno.h \
   include/asm-generic/errno-base.h \
   include/linux/lockdep.h \
@@ -56,10 +56,10 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/prove/locking.h) \
     $(wildcard include/config/prove/rcu.h) \
   include/linux/kobject_ns.h \
-  /root/linux-jps/arch/arm/include/asm/atomic.h \
+  /home/control/minix5/arch/arm/include/asm/atomic.h \
     $(wildcard include/config/smp.h) \
     $(wildcard include/config/generic/atomic64.h) \
-  /root/linux-jps/arch/arm/include/asm/system.h \
+  /home/control/minix5/arch/arm/include/asm/system.h \
     $(wildcard include/config/function/graph/tracer.h) \
     $(wildcard include/config/cpu/32v6k.h) \
     $(wildcard include/config/cpu/xsc3.h) \
@@ -70,18 +70,18 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/cpu/sa110.h) \
     $(wildcard include/config/cpu/v6.h) \
   include/linux/linkage.h \
-  /root/linux-jps/arch/arm/include/asm/linkage.h \
+  /home/control/minix5/arch/arm/include/asm/linkage.h \
   include/linux/irqflags.h \
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   include/linux/typecheck.h \
-  /root/linux-jps/arch/arm/include/asm/irqflags.h \
-  /root/linux-jps/arch/arm/include/asm/ptrace.h \
+  /home/control/minix5/arch/arm/include/asm/irqflags.h \
+  /home/control/minix5/arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/cpu/endian/be8.h) \
     $(wildcard include/config/arm/thumb.h) \
-  /root/linux-jps/arch/arm/include/asm/hwcap.h \
-  /root/linux-jps/arch/arm/include/asm/outercache.h \
+  /home/control/minix5/arch/arm/include/asm/hwcap.h \
+  /home/control/minix5/arch/arm/include/asm/outercache.h \
     $(wildcard include/config/outer/cache/sync.h) \
     $(wildcard include/config/outer/cache.h) \
   include/asm-generic/cmpxchg-local.h \
@@ -96,7 +96,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/thread_info.h \
     $(wildcard include/config/compat.h) \
   include/linux/bitops.h \
-  /root/linux-jps/arch/arm/include/asm/bitops.h \
+  /home/control/minix5/arch/arm/include/asm/bitops.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/fls64.h \
   include/asm-generic/bitops/sched.h \
@@ -105,17 +105,17 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/asm-generic/bitops/const_hweight.h \
   include/asm-generic/bitops/lock.h \
   include/asm-generic/bitops/le.h \
-  /root/linux-jps/arch/arm/include/asm/byteorder.h \
+  /home/control/minix5/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/swab.h \
-  /root/linux-jps/arch/arm/include/asm/swab.h \
+  /home/control/minix5/arch/arm/include/asm/swab.h \
   include/linux/byteorder/generic.h \
-  /root/linux-jps/arch/arm/include/asm/thread_info.h \
+  /home/control/minix5/arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/arm/thumbee.h) \
-  /root/linux-jps/arch/arm/include/asm/fpstate.h \
+  /home/control/minix5/arch/arm/include/asm/fpstate.h \
     $(wildcard include/config/vfpv3.h) \
     $(wildcard include/config/iwmmxt.h) \
-  /root/linux-jps/arch/arm/include/asm/domain.h \
+  /home/control/minix5/arch/arm/include/asm/domain.h \
     $(wildcard include/config/io/36.h) \
     $(wildcard include/config/cpu/use/domains.h) \
   include/linux/kernel.h \
@@ -125,7 +125,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/compaction.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-  /usr/lib/gcc/arm-linux-gnueabi/4.6/include/stdarg.h \
+  /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdarg.h \
   include/linux/log2.h \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
     $(wildcard include/config/arch/has/ilog2/u64.h) \
@@ -133,25 +133,25 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/init.h \
     $(wildcard include/config/modules.h) \
   include/linux/dynamic_debug.h \
-  /root/linux-jps/arch/arm/include/asm/bug.h \
+  /home/control/minix5/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
     $(wildcard include/config/generic/bug.h) \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
-  /root/linux-jps/arch/arm/include/asm/div64.h \
+  /home/control/minix5/arch/arm/include/asm/div64.h \
   include/linux/stringify.h \
   include/linux/bottom_half.h \
   include/linux/spinlock_types.h \
-  /root/linux-jps/arch/arm/include/asm/spinlock_types.h \
+  /home/control/minix5/arch/arm/include/asm/spinlock_types.h \
   include/linux/rwlock_types.h \
-  /root/linux-jps/arch/arm/include/asm/spinlock.h \
+  /home/control/minix5/arch/arm/include/asm/spinlock.h \
     $(wildcard include/config/thumb2/kernel.h) \
-  /root/linux-jps/arch/arm/include/asm/processor.h \
+  /home/control/minix5/arch/arm/include/asm/processor.h \
     $(wildcard include/config/have/hw/breakpoint.h) \
     $(wildcard include/config/mmu.h) \
     $(wildcard include/config/arm/errata/754327.h) \
-  /root/linux-jps/arch/arm/include/asm/hw_breakpoint.h \
+  /home/control/minix5/arch/arm/include/asm/hw_breakpoint.h \
   include/linux/rwlock.h \
   include/linux/spinlock_api_smp.h \
     $(wildcard include/config/inline/spin/lock.h) \
@@ -185,7 +185,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/inline/write/unlock/irqrestore.h) \
   include/linux/kref.h \
   include/linux/wait.h \
-  /root/linux-jps/arch/arm/include/asm/current.h \
+  /home/control/minix5/arch/arm/include/asm/current.h \
   include/linux/klist.h \
   include/linux/module.h \
     $(wildcard include/config/symbol/prefix.h) \
@@ -198,12 +198,12 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/constructors.h) \
     $(wildcard include/config/debug/set/module/ronx.h) \
   include/linux/stat.h \
-  /root/linux-jps/arch/arm/include/asm/stat.h \
+  /home/control/minix5/arch/arm/include/asm/stat.h \
   include/linux/time.h \
     $(wildcard include/config/arch/uses/gettimeoffset.h) \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
-  /root/linux-jps/arch/arm/include/asm/cache.h \
+  /home/control/minix5/arch/arm/include/asm/cache.h \
     $(wildcard include/config/arm/l1/cache/shift.h) \
     $(wildcard include/config/aeabi.h) \
   include/linux/seqlock.h \
@@ -243,12 +243,12 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/bitmap.h \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
-  /root/linux-jps/arch/arm/include/asm/string.h \
+  /home/control/minix5/arch/arm/include/asm/string.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page.h) \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/generated/bounds.h \
-  /root/linux-jps/arch/arm/include/asm/page.h \
+  /home/control/minix5/arch/arm/include/asm/page.h \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
     $(wildcard include/config/cpu/copy/v4wb.h) \
@@ -256,8 +256,8 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/cpu/copy/fa.h) \
     $(wildcard include/config/cpu/xscale.h) \
     $(wildcard include/config/cpu/copy/v6.h) \
-  /root/linux-jps/arch/arm/include/asm/glue.h \
-  /root/linux-jps/arch/arm/include/asm/memory.h \
+  /home/control/minix5/arch/arm/include/asm/glue.h \
+  /home/control/minix5/arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/dram/size.h) \
     $(wildcard include/config/dram/base.h) \
@@ -268,7 +268,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/version.h \
   arch/arm/mach-rk30/include/mach/io.h \
     $(wildcard include/config/rk/debug/uart.h) \
-  /root/linux-jps/arch/arm/include/asm/sizes.h \
+  /home/control/minix5/arch/arm/include/asm/sizes.h \
   include/asm-generic/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/sparsemem/vmemmap.h) \
@@ -296,17 +296,17 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/disable/obsolete/cpumask/functions.h) \
   include/linux/smp.h \
     $(wildcard include/config/use/generic/smp/helpers.h) \
-  /root/linux-jps/arch/arm/include/asm/smp.h \
+  /home/control/minix5/arch/arm/include/asm/smp.h \
   include/linux/percpu.h \
     $(wildcard include/config/need/per/cpu/embed/first/chunk.h) \
     $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
     $(wildcard include/config/have/setup/per/cpu/area.h) \
   include/linux/pfn.h \
-  /root/linux-jps/arch/arm/include/asm/percpu.h \
+  /home/control/minix5/arch/arm/include/asm/percpu.h \
   include/asm-generic/percpu.h \
   include/linux/percpu-defs.h \
     $(wildcard include/config/debug/force/weak/per/cpu.h) \
-  /root/linux-jps/arch/arm/include/asm/topology.h \
+  /home/control/minix5/arch/arm/include/asm/topology.h \
   include/asm-generic/topology.h \
   include/linux/mmdebug.h \
     $(wildcard include/config/debug/vm.h) \
@@ -322,9 +322,9 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/jiffies.h \
   include/linux/timex.h \
   include/linux/param.h \
-  /root/linux-jps/arch/arm/include/asm/param.h \
+  /home/control/minix5/arch/arm/include/asm/param.h \
     $(wildcard include/config/hz.h) \
-  /root/linux-jps/arch/arm/include/asm/timex.h \
+  /home/control/minix5/arch/arm/include/asm/timex.h \
   arch/arm/mach-rk30/include/mach/timex.h \
   include/linux/debugobjects.h \
     $(wildcard include/config/debug/objects.h) \
@@ -344,8 +344,8 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/rcutree.h \
   include/linux/elf.h \
   include/linux/elf-em.h \
-  /root/linux-jps/arch/arm/include/asm/elf.h \
-  /root/linux-jps/arch/arm/include/asm/user.h \
+  /home/control/minix5/arch/arm/include/asm/elf.h \
+  /home/control/minix5/arch/arm/include/asm/user.h \
   include/linux/moduleparam.h \
     $(wildcard include/config/alpha.h) \
     $(wildcard include/config/ia64.h) \
@@ -353,7 +353,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/tracepoint.h \
   include/linux/jump_label.h \
     $(wildcard include/config/jump/label.h) \
-  /root/linux-jps/arch/arm/include/asm/module.h \
+  /home/control/minix5/arch/arm/include/asm/module.h \
     $(wildcard include/config/arm/unwind.h) \
   include/trace/events/module.h \
   include/trace/define_trace.h \
@@ -361,7 +361,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/pm.h) \
     $(wildcard include/config/pm/sleep.h) \
     $(wildcard include/config/pm/runtime.h) \
-  /root/linux-jps/arch/arm/include/asm/device.h \
+  /home/control/minix5/arch/arm/include/asm/device.h \
     $(wildcard include/config/dmabounce.h) \
   include/linux/pm_wakeup.h \
   drivers/usb/dwc_otg/linux/dwc_otg_plat.h \
@@ -380,26 +380,22 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/kmemleak.h \
     $(wildcard include/config/debug/kmemleak.h) \
   include/linux/delay.h \
-  /root/linux-jps/arch/arm/include/asm/delay.h \
-  /root/linux-jps/arch/arm/include/asm/io.h \
+  /home/control/minix5/arch/arm/include/asm/delay.h \
+  /home/control/minix5/arch/arm/include/asm/io.h \
   arch/arm/mach-rk30/include/mach/iomux.h \
   drivers/usb/dwc_otg/dwc_otg_regs.h \
   drivers/usb/dwc_otg/dwc_otg_cil.h \
   drivers/usb/dwc_otg/dwc_otg_driver.h \
   drivers/usb/dwc_otg/dwc_otg_pcd.h \
-  drivers/usb/dwc_otg/dwc_otg_hcd.h \
-  include/linux/usb.h \
-    $(wildcard include/config/usb/devicefs.h) \
-    $(wildcard include/config/usb/mon.h) \
-    $(wildcard include/config/usb/device/class.h) \
-    $(wildcard include/config/usb/suspend.h) \
-  include/linux/mod_devicetable.h \
   include/linux/usb/ch9.h \
     $(wildcard include/config/size.h) \
     $(wildcard include/config/att/one.h) \
     $(wildcard include/config/att/selfpower.h) \
     $(wildcard include/config/att/wakeup.h) \
     $(wildcard include/config/att/battery.h) \
+  include/linux/usb/gadget.h \
+    $(wildcard include/config/usb/gadget/dualspeed.h) \
+    $(wildcard include/config/usb/otg.h) \
   include/linux/interrupt.h \
     $(wildcard include/config/generic/hardirqs.h) \
     $(wildcard include/config/irq/forced/threading.h) \
@@ -412,9 +408,9 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/irq/time/accounting.h) \
   include/linux/ftrace_irq.h \
     $(wildcard include/config/ftrace/nmi/enter.h) \
-  /root/linux-jps/arch/arm/include/asm/hardirq.h \
+  /home/control/minix5/arch/arm/include/asm/hardirq.h \
     $(wildcard include/config/local/timers.h) \
-  /root/linux-jps/arch/arm/include/asm/irq.h \
+  /home/control/minix5/arch/arm/include/asm/irq.h \
   arch/arm/mach-rk30/include/mach/irqs.h \
   include/linux/irq_cpustat.h \
   include/linux/hrtimer.h \
@@ -423,6 +419,97 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/rbtree.h \
   include/linux/timerqueue.h \
   include/trace/events/irq.h \
+  include/linux/dma-mapping.h \
+    $(wildcard include/config/has/dma.h) \
+    $(wildcard include/config/have/dma/attrs.h) \
+    $(wildcard include/config/need/dma/map/state.h) \
+  include/linux/err.h \
+  include/linux/dma-attrs.h \
+  include/linux/bug.h \
+  include/linux/scatterlist.h \
+    $(wildcard include/config/debug/sg.h) \
+  /home/control/minix5/arch/arm/include/asm/scatterlist.h \
+  include/asm-generic/scatterlist.h \
+    $(wildcard include/config/need/sg/dma/length.h) \
+  include/linux/mm.h \
+    $(wildcard include/config/sysctl.h) \
+    $(wildcard include/config/stack/growsup.h) \
+    $(wildcard include/config/transparent/hugepage.h) \
+    $(wildcard include/config/ksm.h) \
+    $(wildcard include/config/debug/pagealloc.h) \
+    $(wildcard include/config/hibernation.h) \
+    $(wildcard include/config/hugetlbfs.h) \
+  include/linux/prio_tree.h \
+  include/linux/debug_locks.h \
+    $(wildcard include/config/debug/locking/api/selftests.h) \
+  include/linux/mm_types.h \
+    $(wildcard include/config/split/ptlock/cpus.h) \
+    $(wildcard include/config/want/page/debug/flags.h) \
+    $(wildcard include/config/aio.h) \
+    $(wildcard include/config/mm/owner.h) \
+    $(wildcard include/config/mmu/notifier.h) \
+  include/linux/auxvec.h \
+  /home/control/minix5/arch/arm/include/asm/auxvec.h \
+  include/linux/page-debug-flags.h \
+    $(wildcard include/config/page/poisoning.h) \
+    $(wildcard include/config/page/debug/something/else.h) \
+  /home/control/minix5/arch/arm/include/asm/mmu.h \
+    $(wildcard include/config/cpu/has/asid.h) \
+  include/linux/range.h \
+  include/linux/bit_spinlock.h \
+  /home/control/minix5/arch/arm/include/asm/pgtable.h \
+    $(wildcard include/config/highpte.h) \
+  include/asm-generic/4level-fixup.h \
+  /home/control/minix5/arch/arm/include/asm/proc-fns.h \
+  /home/control/minix5/arch/arm/include/asm/glue-proc.h \
+    $(wildcard include/config/cpu/arm610.h) \
+    $(wildcard include/config/cpu/arm7tdmi.h) \
+    $(wildcard include/config/cpu/arm710.h) \
+    $(wildcard include/config/cpu/arm720t.h) \
+    $(wildcard include/config/cpu/arm740t.h) \
+    $(wildcard include/config/cpu/arm9tdmi.h) \
+    $(wildcard include/config/cpu/arm920t.h) \
+    $(wildcard include/config/cpu/arm922t.h) \
+    $(wildcard include/config/cpu/arm925t.h) \
+    $(wildcard include/config/cpu/arm926t.h) \
+    $(wildcard include/config/cpu/arm940t.h) \
+    $(wildcard include/config/cpu/arm946e.h) \
+    $(wildcard include/config/cpu/arm1020.h) \
+    $(wildcard include/config/cpu/arm1020e.h) \
+    $(wildcard include/config/cpu/arm1022.h) \
+    $(wildcard include/config/cpu/arm1026.h) \
+    $(wildcard include/config/cpu/mohawk.h) \
+    $(wildcard include/config/cpu/feroceon.h) \
+    $(wildcard include/config/cpu/v6k.h) \
+    $(wildcard include/config/cpu/v7.h) \
+  arch/arm/mach-rk30/include/mach/vmalloc.h \
+  /home/control/minix5/arch/arm/include/asm/pgtable-hwdef.h \
+  include/asm-generic/pgtable.h \
+  include/linux/page-flags.h \
+    $(wildcard include/config/pageflags/extended.h) \
+    $(wildcard include/config/arch/uses/pg/uncached.h) \
+    $(wildcard include/config/memory/failure.h) \
+    $(wildcard include/config/swap.h) \
+    $(wildcard include/config/s390.h) \
+  include/linux/huge_mm.h \
+  include/linux/vmstat.h \
+    $(wildcard include/config/vm/event/counters.h) \
+  include/linux/vm_event_item.h \
+  /home/control/minix5/arch/arm/include/asm/dma-mapping.h \
+  include/linux/dma-debug.h \
+    $(wildcard include/config/dma/api/debug.h) \
+  include/asm-generic/dma-coherent.h \
+    $(wildcard include/config/have/generic/dma/coherent.h) \
+  include/linux/wakelock.h \
+    $(wildcard include/config/has/wakelock.h) \
+    $(wildcard include/config/wakelock/stat.h) \
+  drivers/usb/dwc_otg/dwc_otg_hcd.h \
+  include/linux/usb.h \
+    $(wildcard include/config/usb/devicefs.h) \
+    $(wildcard include/config/usb/mon.h) \
+    $(wildcard include/config/usb/device/class.h) \
+    $(wildcard include/config/usb/suspend.h) \
+  include/linux/mod_devicetable.h \
   include/linux/fs.h \
     $(wildcard include/config/security.h) \
     $(wildcard include/config/quota.h) \
@@ -438,7 +525,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/migration.h) \
   include/linux/limits.h \
   include/linux/ioctl.h \
-  /root/linux-jps/arch/arm/include/asm/ioctl.h \
+  /home/control/minix5/arch/arm/include/asm/ioctl.h \
   include/asm-generic/ioctl.h \
   include/linux/blk_types.h \
     $(wildcard include/config/blk/dev/integrity.h) \
@@ -447,10 +534,8 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/rculist.h \
   include/linux/rculist_bl.h \
   include/linux/list_bl.h \
-  include/linux/bit_spinlock.h \
   include/linux/path.h \
   include/linux/radix-tree.h \
-  include/linux/prio_tree.h \
   include/linux/pid.h \
   include/linux/capability.h \
   include/linux/semaphore.h \
@@ -467,9 +552,8 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/sunrpc/msg_prot.h \
   include/linux/inet.h \
   include/linux/fcntl.h \
-  /root/linux-jps/arch/arm/include/asm/fcntl.h \
+  /home/control/minix5/arch/arm/include/asm/fcntl.h \
   include/asm-generic/fcntl.h \
-  include/linux/err.h \
   include/linux/sched.h \
     $(wildcard include/config/sched/debug.h) \
     $(wildcard include/config/lockup/detector.h) \
@@ -501,34 +585,19 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/fault/injection.h) \
     $(wildcard include/config/latencytop.h) \
     $(wildcard include/config/have/unstable/sched/clock.h) \
-    $(wildcard include/config/stack/growsup.h) \
     $(wildcard include/config/debug/stack/usage.h) \
     $(wildcard include/config/cgroup/sched.h) \
-    $(wildcard include/config/mm/owner.h) \
-  include/linux/mm_types.h \
-    $(wildcard include/config/split/ptlock/cpus.h) \
-    $(wildcard include/config/want/page/debug/flags.h) \
-    $(wildcard include/config/aio.h) \
-    $(wildcard include/config/mmu/notifier.h) \
-    $(wildcard include/config/transparent/hugepage.h) \
-  include/linux/auxvec.h \
-  /root/linux-jps/arch/arm/include/asm/auxvec.h \
-  include/linux/page-debug-flags.h \
-    $(wildcard include/config/page/poisoning.h) \
-    $(wildcard include/config/page/debug/something/else.h) \
-  /root/linux-jps/arch/arm/include/asm/mmu.h \
-    $(wildcard include/config/cpu/has/asid.h) \
-  /root/linux-jps/arch/arm/include/asm/cputime.h \
+  /home/control/minix5/arch/arm/include/asm/cputime.h \
   include/asm-generic/cputime.h \
   include/linux/sem.h \
   include/linux/ipc.h \
-  /root/linux-jps/arch/arm/include/asm/ipcbuf.h \
-  /root/linux-jps/arch/arm/include/asm/sembuf.h \
+  /home/control/minix5/arch/arm/include/asm/ipcbuf.h \
+  /home/control/minix5/arch/arm/include/asm/sembuf.h \
   include/linux/signal.h \
-  /root/linux-jps/arch/arm/include/asm/signal.h \
+  /home/control/minix5/arch/arm/include/asm/signal.h \
   include/asm-generic/signal-defs.h \
-  /root/linux-jps/arch/arm/include/asm/sigcontext.h \
-  /root/linux-jps/arch/arm/include/asm/siginfo.h \
+  /home/control/minix5/arch/arm/include/asm/sigcontext.h \
+  /home/control/minix5/arch/arm/include/asm/siginfo.h \
   include/asm-generic/siginfo.h \
   include/linux/proportions.h \
   include/linux/seccomp.h \
@@ -538,7 +607,7 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
   include/linux/plist.h \
     $(wildcard include/config/debug/pi/list.h) \
   include/linux/resource.h \
-  /root/linux-jps/arch/arm/include/asm/resource.h \
+  /home/control/minix5/arch/arm/include/asm/resource.h \
   include/asm-generic/resource.h \
   include/linux/task_io_accounting.h \
     $(wildcard include/config/task/io/accounting.h) \
@@ -547,7 +616,6 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/debug/credentials.h) \
     $(wildcard include/config/user/ns.h) \
   include/linux/key.h \
-    $(wildcard include/config/sysctl.h) \
   include/linux/selinux.h \
     $(wildcard include/config/security/selinux.h) \
   include/linux/aio.h \
@@ -565,11 +633,8 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/vt.h) \
     $(wildcard include/config/vt/console.h) \
     $(wildcard include/config/suspend.h) \
-    $(wildcard include/config/hibernation.h) \
     $(wildcard include/config/hibernate/callbacks.h) \
   include/linux/swap.h \
-    $(wildcard include/config/memory/failure.h) \
-    $(wildcard include/config/swap.h) \
     $(wildcard include/config/cgroup/mem/res/ctlr/swap.h) \
   include/linux/memcontrol.h \
     $(wildcard include/config/cgroup/mem/cont.h) \
@@ -586,52 +651,9 @@ deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o := \
     $(wildcard include/config/net/cls/cgroup.h) \
     $(wildcard include/config/blk/cgroup.h) \
     $(wildcard include/config/cgroup/perf.h) \
-  include/linux/vm_event_item.h \
   include/linux/node.h \
     $(wildcard include/config/memory/hotplug/sparse.h) \
-    $(wildcard include/config/hugetlbfs.h) \
   include/linux/sysdev.h \
-  include/linux/mm.h \
-    $(wildcard include/config/ksm.h) \
-    $(wildcard include/config/debug/pagealloc.h) \
-  include/linux/debug_locks.h \
-    $(wildcard include/config/debug/locking/api/selftests.h) \
-  include/linux/range.h \
-  /root/linux-jps/arch/arm/include/asm/pgtable.h \
-    $(wildcard include/config/highpte.h) \
-  include/asm-generic/4level-fixup.h \
-  /root/linux-jps/arch/arm/include/asm/proc-fns.h \
-  /root/linux-jps/arch/arm/include/asm/glue-proc.h \
-    $(wildcard include/config/cpu/arm610.h) \
-    $(wildcard include/config/cpu/arm7tdmi.h) \
-    $(wildcard include/config/cpu/arm710.h) \
-    $(wildcard include/config/cpu/arm720t.h) \
-    $(wildcard include/config/cpu/arm740t.h) \
-    $(wildcard include/config/cpu/arm9tdmi.h) \
-    $(wildcard include/config/cpu/arm920t.h) \
-    $(wildcard include/config/cpu/arm922t.h) \
-    $(wildcard include/config/cpu/arm925t.h) \
-    $(wildcard include/config/cpu/arm926t.h) \
-    $(wildcard include/config/cpu/arm940t.h) \
-    $(wildcard include/config/cpu/arm946e.h) \
-    $(wildcard include/config/cpu/arm1020.h) \
-    $(wildcard include/config/cpu/arm1020e.h) \
-    $(wildcard include/config/cpu/arm1022.h) \
-    $(wildcard include/config/cpu/arm1026.h) \
-    $(wildcard include/config/cpu/mohawk.h) \
-    $(wildcard include/config/cpu/feroceon.h) \
-    $(wildcard include/config/cpu/v6k.h) \
-    $(wildcard include/config/cpu/v7.h) \
-  arch/arm/mach-rk30/include/mach/vmalloc.h \
-  /root/linux-jps/arch/arm/include/asm/pgtable-hwdef.h \
-  include/asm-generic/pgtable.h \
-  include/linux/page-flags.h \
-    $(wildcard include/config/pageflags/extended.h) \
-    $(wildcard include/config/arch/uses/pg/uncached.h) \
-    $(wildcard include/config/s390.h) \
-  include/linux/huge_mm.h \
-  include/linux/vmstat.h \
-    $(wildcard include/config/vm/event/counters.h) \
 
 drivers/usb/dwc_otg/dwc_otg_cil_intr.o: $(deps_drivers/usb/dwc_otg/dwc_otg_cil_intr.o)
 

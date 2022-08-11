@@ -1,0 +1,3 @@
+kernel/drivers/gpio/basic_mmio_gpio.ko
+kernel/drivers/gpio/basic_mmio_gpio.ko
+kernel/drivers/gpio/wm831x-gpio.ko

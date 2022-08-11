@@ -1,2 +1,2 @@
-deps_initramfs := /root/linux-jps/scripts/gen_initramfs_list.sh \
+deps_initramfs := /home/control/minix5/scripts/gen_initramfs_list.sh \
 initramfs_rk.cpio

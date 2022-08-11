@@ -1,0 +1,4 @@
+kernel/drivers/regulator/wm831x-dcdc.ko
+kernel/drivers/regulator/wm831x-isink.ko
+kernel/drivers/regulator/wm831x-ldo.ko
+kernel/drivers/regulator/rk30-pwm-regulator.ko

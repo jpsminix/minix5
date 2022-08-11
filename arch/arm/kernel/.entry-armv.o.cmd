@@ -1,4 +1,4 @@
-cmd_arch/arm/kernel/entry-armv.o := arm-linux-gnueabi-gcc -Wp,-MD,arch/arm/kernel/.entry-armv.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabi/4.6/include -I/root/linux-jps/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-rk30/include -Iarch/arm/plat-rk/include -D__ASSEMBLY__ -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables  -D__LINUX_ARM_ARCH__=7 -march=armv7-a  -include asm/unified.h -msoft-float        -c -o arch/arm/kernel/entry-armv.o arch/arm/kernel/entry-armv.S
+cmd_arch/arm/kernel/entry-armv.o := arm-linux-gnueabi-gcc -Wp,-MD,arch/arm/kernel/.entry-armv.o.d  -nostdinc -isystem /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include -I/home/control/minix5/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-rk30/include -Iarch/arm/plat-rk/include -D__ASSEMBLY__ -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables  -D__LINUX_ARM_ARCH__=7 -march=armv7-a  -include asm/unified.h -msoft-float        -c -o arch/arm/kernel/entry-armv.o arch/arm/kernel/entry-armv.S
 
 source_arch/arm/kernel/entry-armv.o := arch/arm/kernel/entry-armv.S
 
@@ -23,9 +23,9 @@ deps_arch/arm/kernel/entry-armv.o := \
     $(wildcard include/config/cc/stackprotector.h) \
     $(wildcard include/config/smp.h) \
     $(wildcard include/config/arm/thumb.h) \
-  /root/linux-jps/arch/arm/include/asm/unified.h \
+  /home/control/minix5/arch/arm/include/asm/unified.h \
     $(wildcard include/config/arm/asm/unified.h) \
-  /root/linux-jps/arch/arm/include/asm/memory.h \
+  /home/control/minix5/arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/highmem.h) \
     $(wildcard include/config/dram/size.h) \
@@ -46,22 +46,22 @@ deps_arch/arm/kernel/entry-armv.o := \
     $(wildcard include/config/arch/dma/addr/t/64bit.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
     $(wildcard include/config/64bit.h) \
-  /root/linux-jps/arch/arm/include/asm/types.h \
+  /home/control/minix5/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
-  /root/linux-jps/arch/arm/include/asm/bitsperlong.h \
+  /home/control/minix5/arch/arm/include/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   arch/arm/mach-rk30/include/mach/memory.h \
   include/linux/version.h \
   arch/arm/mach-rk30/include/mach/io.h \
     $(wildcard include/config/rk/debug/uart.h) \
-  /root/linux-jps/arch/arm/include/asm/sizes.h \
+  /home/control/minix5/arch/arm/include/asm/sizes.h \
   include/asm-generic/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/flatmem.h) \
     $(wildcard include/config/discontigmem.h) \
     $(wildcard include/config/sparsemem/vmemmap.h) \
     $(wildcard include/config/sparsemem.h) \
-  /root/linux-jps/arch/arm/include/asm/glue-df.h \
+  /home/control/minix5/arch/arm/include/asm/glue-df.h \
     $(wildcard include/config/cpu/abrt/lv4t.h) \
     $(wildcard include/config/cpu/abrt/ev4.h) \
     $(wildcard include/config/cpu/abrt/ev4t.h) \
@@ -69,24 +69,24 @@ deps_arch/arm/kernel/entry-armv.o := \
     $(wildcard include/config/cpu/abrt/ev5t.h) \
     $(wildcard include/config/cpu/abrt/ev6.h) \
     $(wildcard include/config/cpu/abrt/ev7.h) \
-  /root/linux-jps/arch/arm/include/asm/glue.h \
-  /root/linux-jps/arch/arm/include/asm/glue-pf.h \
+  /home/control/minix5/arch/arm/include/asm/glue.h \
+  /home/control/minix5/arch/arm/include/asm/glue-pf.h \
     $(wildcard include/config/cpu/pabrt/legacy.h) \
     $(wildcard include/config/cpu/pabrt/v6.h) \
     $(wildcard include/config/cpu/pabrt/v7.h) \
-  /root/linux-jps/arch/arm/include/asm/vfpmacros.h \
+  /home/control/minix5/arch/arm/include/asm/vfpmacros.h \
     $(wildcard include/config/vfpv3.h) \
-  /root/linux-jps/arch/arm/include/asm/hwcap.h \
-  /root/linux-jps/arch/arm/include/asm/vfp.h \
+  /home/control/minix5/arch/arm/include/asm/hwcap.h \
+  /home/control/minix5/arch/arm/include/asm/vfp.h \
   arch/arm/mach-rk30/include/mach/entry-macro.S \
-  /root/linux-jps/arch/arm/include/asm/hardware/entry-macro-gic.S \
-  /root/linux-jps/arch/arm/include/asm/hardware/gic.h \
-  /root/linux-jps/arch/arm/include/asm/thread_notify.h \
-  /root/linux-jps/arch/arm/include/asm/unwind.h \
+  /home/control/minix5/arch/arm/include/asm/hardware/entry-macro-gic.S \
+  /home/control/minix5/arch/arm/include/asm/hardware/gic.h \
+  /home/control/minix5/arch/arm/include/asm/thread_notify.h \
+  /home/control/minix5/arch/arm/include/asm/unwind.h \
     $(wildcard include/config/arm/unwind.h) \
-  /root/linux-jps/arch/arm/include/asm/unistd.h \
+  /home/control/minix5/arch/arm/include/asm/unistd.h \
     $(wildcard include/config/oabi/compat.h) \
-  /root/linux-jps/arch/arm/include/asm/tls.h \
+  /home/control/minix5/arch/arm/include/asm/tls.h \
     $(wildcard include/config/tls/reg/emul.h) \
     $(wildcard include/config/cpu/v6.h) \
     $(wildcard include/config/cpu/32v6k.h) \
@@ -98,21 +98,21 @@ deps_arch/arm/kernel/entry-armv.o := \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/hotplug.h) \
   include/linux/linkage.h \
-  /root/linux-jps/arch/arm/include/asm/linkage.h \
-  /root/linux-jps/arch/arm/include/asm/assembler.h \
+  /home/control/minix5/arch/arm/include/asm/linkage.h \
+  /home/control/minix5/arch/arm/include/asm/assembler.h \
     $(wildcard include/config/cpu/feroceon.h) \
-  /root/linux-jps/arch/arm/include/asm/ptrace.h \
-  /root/linux-jps/arch/arm/include/asm/domain.h \
+  /home/control/minix5/arch/arm/include/asm/ptrace.h \
+  /home/control/minix5/arch/arm/include/asm/domain.h \
     $(wildcard include/config/io/36.h) \
-  /root/linux-jps/arch/arm/include/asm/asm-offsets.h \
+  /home/control/minix5/arch/arm/include/asm/asm-offsets.h \
   include/generated/asm-offsets.h \
-  /root/linux-jps/arch/arm/include/asm/errno.h \
+  /home/control/minix5/arch/arm/include/asm/errno.h \
   include/asm-generic/errno.h \
   include/asm-generic/errno-base.h \
-  /root/linux-jps/arch/arm/include/asm/thread_info.h \
+  /home/control/minix5/arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/arm/thumbee.h) \
-  /root/linux-jps/arch/arm/include/asm/fpstate.h \
-  /root/linux-jps/arch/arm/include/asm/entry-macro-multi.S \
+  /home/control/minix5/arch/arm/include/asm/fpstate.h \
+  /home/control/minix5/arch/arm/include/asm/entry-macro-multi.S \
     $(wildcard include/config/local/timers.h) \
 
 arch/arm/kernel/entry-armv.o: $(deps_arch/arm/kernel/entry-armv.o)

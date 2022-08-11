@@ -1,0 +1,1 @@
+cmd_drivers/media/common/tuners/mxl5007t.ko := arm-linux-gnueabi-ld -EL -r  -T /home/control/minix5/scripts/module-common.lds --build-id  -o drivers/media/common/tuners/mxl5007t.ko drivers/media/common/tuners/mxl5007t.o drivers/media/common/tuners/mxl5007t.mod.o

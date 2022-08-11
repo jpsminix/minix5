@@ -1,0 +1,1 @@
+cmd_drivers/usb/serial/ch341.ko := arm-linux-gnueabi-ld -EL -r  -T /home/control/minix5/scripts/module-common.lds --build-id  -o drivers/usb/serial/ch341.ko drivers/usb/serial/ch341.o drivers/usb/serial/ch341.mod.o

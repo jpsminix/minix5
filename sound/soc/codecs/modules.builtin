@@ -1,0 +1,3 @@
+kernel/sound/soc/codecs/snd-soc-spdif.ko
+kernel/sound/soc/codecs/snd-soc-rt5631.ko
+kernel/sound/soc/codecs/snd-soc-rockchip-hdmi.ko

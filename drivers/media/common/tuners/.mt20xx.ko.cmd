@@ -1,0 +1,1 @@
+cmd_drivers/media/common/tuners/mt20xx.ko := arm-linux-gnueabi-ld -EL -r  -T /home/control/minix5/scripts/module-common.lds --build-id  -o drivers/media/common/tuners/mt20xx.ko drivers/media/common/tuners/mt20xx.o drivers/media/common/tuners/mt20xx.mod.o

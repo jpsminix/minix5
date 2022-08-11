@@ -7,31 +7,26 @@ This files are the initramfs. This are the basics ones:
  - initramfs_rk.cpio.gz
  - initramfs_rk.cpio
 
-
 ###
 The best config that i have try is saved as:
-LAST_CONFIG_30-05-2013_ONLY_LEFT_VPU
+LAST_CONFIG_11-08-2022_ONLY_LEFT_VPU
 
 For use this (copy on the path of source kernel):
-cp LAST_CONFIG_30-05-2013_ONLY_LEFT_VPU .config
-
+cp LAST_CONFIG_11-08-2022_ONLY_LEFT_VPU .config
 
 ####
-I rememeber i have done a little modifications over original source code from repository of ANDREWDB. 
+I rememeber that i have done a little modifications over original source code from repository of ANDREWDB. 
 This modifications are minor (as when u compile and get an error). The only one i remember that is bigger,
 is the disp_ump module that i have copied from OLEGK0 source.
 
+####
+I have used the sources from OLEGK0, but i have got many errors from mali drivers, SO i used the android 
+binary modules (copied to my ubuntu version) and loaded. Same for wireless driver.
 
 ####
-I am used the sources from OLEGK0, but i got many errors from mali drivers, SO i used the binary modules
-(copied to my ubuntu version) and loaded.
-
-
-####
-REMEMBER that our minix x5 use the WM8326 power module chip that IS DIFFERENT from TPS6xxxx of MK808 (this
-is the other kernels dont work at all on our minix). DONT ENABLE TPS or you will get a kernel image that
+REMEMBER that our Minix x5 use the WM8326 power module chip that IS DIFFERENT from TPS6xxxx of MK808 (this
+is why the other kernels dont work at all on our minix). DONT ENABLE TPS or you will get a kernel image that
 crash on start.
-
 
 ####
 You need to install a cross compiler to compile ARM code on X86 processor (of your PC).
@@ -40,21 +35,20 @@ You need to install a cross compiler to compile ARM code on X86 processor (of yo
 NOTE: The "-j12" option its mean the number of processor you have x2. I have 6 cpu x2 =12
 
 Basics commands on kernel compilation (all this is a example of one of my compilations):
- - cd /mnt/ANDREWDB/rk3066-kernel
+ - kerneldir=<your_kernel_dir>
+ - cd $kerneldir
  - make mrproper
- - cp LAST_config /mnt/ANDREWDB/rk3066-kernel/.config
- - nano .config
+ - cp LAST_CONFIG_11-08-2022_ONLY_LEFT_VPU .config
  - make menuconfig
 
-Here you get the zImage file for the recovery.img:
+Here you get the zImage file for the boot.img:
  - KDIR=./ make arch=ARM -j12 zImage
 
-Next you get the recovery.img file:
- - oldmkbootimg  --kernel arch/arm/boot/zImage --ramdisk initramfs_rk.cpio.gz -o /media/recovery.img_MTD
+Next you get the boot.img file:
+ - ./mkbootimg --kernel arch/arm/boot/zImage --ramdisk initramfs_rk.cpio.gz --base 60400000 --pagesize 16384 --ramdiskaddr 62000000 -o ~/boot.img
 
 For modules (i install this on another path for take it easy and not in /lib of your sistem)
  - KDIR=./ make arch=ARM -j12 modules && make -j12 modules_install INSTALL_MOD_PATH=./MOD/
 
-
 ####
-I hope this notes help you. Keep holding on men!
+I hope this notes help you. Keep holding on!

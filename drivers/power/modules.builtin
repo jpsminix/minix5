@@ -1,0 +1,3 @@
+kernel/drivers/power/power_supply.ko
+kernel/drivers/power/wm831x_power.ko
+kernel/drivers/power/test_power.ko

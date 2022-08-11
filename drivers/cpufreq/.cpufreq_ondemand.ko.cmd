@@ -1,0 +1,1 @@
+cmd_drivers/cpufreq/cpufreq_ondemand.ko := arm-linux-gnueabi-ld -EL -r  -T /home/control/minix5/scripts/module-common.lds --build-id  -o drivers/cpufreq/cpufreq_ondemand.ko drivers/cpufreq/cpufreq_ondemand.o drivers/cpufreq/cpufreq_ondemand.mod.o

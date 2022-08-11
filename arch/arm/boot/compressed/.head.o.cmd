@@ -1,4 +1,4 @@
-cmd_arch/arm/boot/compressed/head.o := arm-linux-gnueabi-gcc -Wp,-MD,arch/arm/boot/compressed/.head.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabi/4.6/include -I/root/linux-jps/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-rk30/include -Iarch/arm/plat-rk/include -D__ASSEMBLY__ -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables  -D__LINUX_ARM_ARCH__=7 -march=armv7-a  -include asm/unified.h -msoft-float    -Wa,-march=all  -DTEXT_OFFSET=0x00408000   -c -o arch/arm/boot/compressed/head.o arch/arm/boot/compressed/head.S
+cmd_arch/arm/boot/compressed/head.o := arm-linux-gnueabi-gcc -Wp,-MD,arch/arm/boot/compressed/.head.o.d  -nostdinc -isystem /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include -I/home/control/minix5/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-rk30/include -Iarch/arm/plat-rk/include -D__ASSEMBLY__ -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables  -D__LINUX_ARM_ARCH__=7 -march=armv7-a  -include asm/unified.h -msoft-float    -Wa,-march=all  -DTEXT_OFFSET=0x00408000   -c -o arch/arm/boot/compressed/head.o arch/arm/boot/compressed/head.S
 
 source_arch/arm/boot/compressed/head.o := arch/arm/boot/compressed/head.S
 
@@ -23,7 +23,7 @@ deps_arch/arm/boot/compressed/head.o := \
     $(wildcard include/config/thumb2/kernel.h) \
     $(wildcard include/config/processor/id.h) \
     $(wildcard include/config/cpu/feroceon/old/id.h) \
-  /root/linux-jps/arch/arm/include/asm/unified.h \
+  /home/control/minix5/arch/arm/include/asm/unified.h \
     $(wildcard include/config/arm/asm/unified.h) \
   include/linux/linkage.h \
   include/linux/compiler.h \
@@ -32,7 +32,7 @@ deps_arch/arm/boot/compressed/head.o := \
     $(wildcard include/config/profile/all/branches.h) \
     $(wildcard include/config/enable/must/check.h) \
     $(wildcard include/config/enable/warn/deprecated.h) \
-  /root/linux-jps/arch/arm/include/asm/linkage.h \
+  /home/control/minix5/arch/arm/include/asm/linkage.h \
 
 arch/arm/boot/compressed/head.o: $(deps_arch/arm/boot/compressed/head.o)
 

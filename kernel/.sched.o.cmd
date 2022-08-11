@@ -1,4 +1,4 @@
-cmd_kernel/sched.o := arm-linux-gnueabi-gcc -Wp,-MD,kernel/.sched.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabi/4.6/include -I/root/linux-jps/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-rk30/include -Iarch/arm/plat-rk/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -fno-dwarf2-cfi-asm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO -fno-omit-frame-pointer    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(sched)"  -D"KBUILD_MODNAME=KBUILD_STR(sched)" -c -o kernel/sched.o kernel/sched.c
+cmd_kernel/sched.o := arm-linux-gnueabi-gcc -Wp,-MD,kernel/.sched.o.d  -nostdinc -isystem /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include -I/home/control/minix5/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-rk30/include -Iarch/arm/plat-rk/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -fno-dwarf2-cfi-asm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO -fno-omit-frame-pointer    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(sched)"  -D"KBUILD_MODNAME=KBUILD_STR(sched)" -c -o kernel/sched.o kernel/sched.c
 
 source_kernel/sched.o := kernel/sched.c
 
@@ -53,7 +53,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/hibernation.h) \
     $(wildcard include/config/hugetlbfs.h) \
   include/linux/errno.h \
-  /root/linux-jps/arch/arm/include/asm/errno.h \
+  /home/control/minix5/arch/arm/include/asm/errno.h \
   include/asm-generic/errno.h \
   include/asm-generic/errno-base.h \
   include/linux/gfp.h \
@@ -89,9 +89,9 @@ deps_kernel/sched.o := \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/arch/dma/addr/t/64bit.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
-  /root/linux-jps/arch/arm/include/asm/types.h \
+  /home/control/minix5/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
-  /root/linux-jps/arch/arm/include/asm/bitsperlong.h \
+  /home/control/minix5/arch/arm/include/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/linux/posix_types.h \
   include/linux/stddef.h \
@@ -105,10 +105,10 @@ deps_kernel/sched.o := \
     $(wildcard include/config/arch/supports/optimized/inlining.h) \
     $(wildcard include/config/optimize/inlining.h) \
   include/linux/compiler-gcc4.h \
-  /root/linux-jps/arch/arm/include/asm/posix_types.h \
+  /home/control/minix5/arch/arm/include/asm/posix_types.h \
   include/linux/bitops.h \
-  /root/linux-jps/arch/arm/include/asm/bitops.h \
-  /root/linux-jps/arch/arm/include/asm/system.h \
+  /home/control/minix5/arch/arm/include/asm/bitops.h \
+  /home/control/minix5/arch/arm/include/asm/system.h \
     $(wildcard include/config/function/graph/tracer.h) \
     $(wildcard include/config/cpu/32v6k.h) \
     $(wildcard include/config/cpu/xsc3.h) \
@@ -119,17 +119,17 @@ deps_kernel/sched.o := \
     $(wildcard include/config/cpu/sa110.h) \
     $(wildcard include/config/cpu/v6.h) \
   include/linux/linkage.h \
-  /root/linux-jps/arch/arm/include/asm/linkage.h \
+  /home/control/minix5/arch/arm/include/asm/linkage.h \
   include/linux/irqflags.h \
     $(wildcard include/config/trace/irqflags.h) \
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
-  /root/linux-jps/arch/arm/include/asm/irqflags.h \
-  /root/linux-jps/arch/arm/include/asm/ptrace.h \
+  /home/control/minix5/arch/arm/include/asm/irqflags.h \
+  /home/control/minix5/arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/cpu/endian/be8.h) \
     $(wildcard include/config/arm/thumb.h) \
-  /root/linux-jps/arch/arm/include/asm/hwcap.h \
-  /root/linux-jps/arch/arm/include/asm/outercache.h \
+  /home/control/minix5/arch/arm/include/asm/hwcap.h \
+  /home/control/minix5/arch/arm/include/asm/outercache.h \
     $(wildcard include/config/outer/cache/sync.h) \
     $(wildcard include/config/outer/cache.h) \
   include/asm-generic/cmpxchg-local.h \
@@ -141,17 +141,17 @@ deps_kernel/sched.o := \
   include/asm-generic/bitops/const_hweight.h \
   include/asm-generic/bitops/lock.h \
   include/asm-generic/bitops/le.h \
-  /root/linux-jps/arch/arm/include/asm/byteorder.h \
+  /home/control/minix5/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/swab.h \
-  /root/linux-jps/arch/arm/include/asm/swab.h \
+  /home/control/minix5/arch/arm/include/asm/swab.h \
   include/linux/byteorder/generic.h \
-  /root/linux-jps/arch/arm/include/asm/thread_info.h \
+  /home/control/minix5/arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/arm/thumbee.h) \
-  /root/linux-jps/arch/arm/include/asm/fpstate.h \
+  /home/control/minix5/arch/arm/include/asm/fpstate.h \
     $(wildcard include/config/vfpv3.h) \
     $(wildcard include/config/iwmmxt.h) \
-  /root/linux-jps/arch/arm/include/asm/domain.h \
+  /home/control/minix5/arch/arm/include/asm/domain.h \
     $(wildcard include/config/io/36.h) \
     $(wildcard include/config/cpu/use/domains.h) \
   include/linux/list.h \
@@ -165,7 +165,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/ring/buffer.h) \
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-  /usr/lib/gcc/arm-linux-gnueabi/4.6/include/stdarg.h \
+  /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdarg.h \
   include/linux/log2.h \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
     $(wildcard include/config/arch/has/ilog2/u64.h) \
@@ -176,27 +176,27 @@ deps_kernel/sched.o := \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/hotplug.h) \
   include/linux/dynamic_debug.h \
-  /root/linux-jps/arch/arm/include/asm/bug.h \
+  /home/control/minix5/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
     $(wildcard include/config/generic/bug.h) \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
-  /root/linux-jps/arch/arm/include/asm/div64.h \
+  /home/control/minix5/arch/arm/include/asm/div64.h \
   include/linux/stringify.h \
   include/linux/bottom_half.h \
   include/linux/spinlock_types.h \
-  /root/linux-jps/arch/arm/include/asm/spinlock_types.h \
+  /home/control/minix5/arch/arm/include/asm/spinlock_types.h \
   include/linux/lockdep.h \
     $(wildcard include/config/lock/stat.h) \
     $(wildcard include/config/prove/rcu.h) \
   include/linux/rwlock_types.h \
-  /root/linux-jps/arch/arm/include/asm/spinlock.h \
+  /home/control/minix5/arch/arm/include/asm/spinlock.h \
     $(wildcard include/config/thumb2/kernel.h) \
-  /root/linux-jps/arch/arm/include/asm/processor.h \
+  /home/control/minix5/arch/arm/include/asm/processor.h \
     $(wildcard include/config/have/hw/breakpoint.h) \
     $(wildcard include/config/arm/errata/754327.h) \
-  /root/linux-jps/arch/arm/include/asm/hw_breakpoint.h \
+  /home/control/minix5/arch/arm/include/asm/hw_breakpoint.h \
   include/linux/rwlock.h \
   include/linux/spinlock_api_smp.h \
     $(wildcard include/config/inline/spin/lock.h) \
@@ -228,14 +228,14 @@ deps_kernel/sched.o := \
     $(wildcard include/config/inline/write/unlock/irq.h) \
     $(wildcard include/config/inline/read/unlock/irqrestore.h) \
     $(wildcard include/config/inline/write/unlock/irqrestore.h) \
-  /root/linux-jps/arch/arm/include/asm/atomic.h \
+  /home/control/minix5/arch/arm/include/asm/atomic.h \
     $(wildcard include/config/generic/atomic64.h) \
   include/asm-generic/atomic-long.h \
   include/linux/wait.h \
-  /root/linux-jps/arch/arm/include/asm/current.h \
+  /home/control/minix5/arch/arm/include/asm/current.h \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
-  /root/linux-jps/arch/arm/include/asm/cache.h \
+  /home/control/minix5/arch/arm/include/asm/cache.h \
     $(wildcard include/config/arm/l1/cache/shift.h) \
     $(wildcard include/config/aeabi.h) \
   include/linux/threads.h \
@@ -248,12 +248,12 @@ deps_kernel/sched.o := \
   include/linux/bitmap.h \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
-  /root/linux-jps/arch/arm/include/asm/string.h \
+  /home/control/minix5/arch/arm/include/asm/string.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page.h) \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/generated/bounds.h \
-  /root/linux-jps/arch/arm/include/asm/page.h \
+  /home/control/minix5/arch/arm/include/asm/page.h \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
     $(wildcard include/config/cpu/copy/v4wb.h) \
@@ -261,8 +261,8 @@ deps_kernel/sched.o := \
     $(wildcard include/config/cpu/copy/fa.h) \
     $(wildcard include/config/cpu/xscale.h) \
     $(wildcard include/config/cpu/copy/v6.h) \
-  /root/linux-jps/arch/arm/include/asm/glue.h \
-  /root/linux-jps/arch/arm/include/asm/memory.h \
+  /home/control/minix5/arch/arm/include/asm/glue.h \
+  /home/control/minix5/arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/dram/size.h) \
     $(wildcard include/config/dram/base.h) \
@@ -273,7 +273,7 @@ deps_kernel/sched.o := \
   include/linux/version.h \
   arch/arm/mach-rk30/include/mach/io.h \
     $(wildcard include/config/rk/debug/uart.h) \
-  /root/linux-jps/arch/arm/include/asm/sizes.h \
+  /home/control/minix5/arch/arm/include/asm/sizes.h \
   include/asm-generic/sizes.h \
   include/asm-generic/memory_model.h \
   include/asm-generic/getorder.h \
@@ -295,17 +295,17 @@ deps_kernel/sched.o := \
     $(wildcard include/config/disable/obsolete/cpumask/functions.h) \
   include/linux/smp.h \
     $(wildcard include/config/use/generic/smp/helpers.h) \
-  /root/linux-jps/arch/arm/include/asm/smp.h \
+  /home/control/minix5/arch/arm/include/asm/smp.h \
   include/linux/percpu.h \
     $(wildcard include/config/need/per/cpu/embed/first/chunk.h) \
     $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
     $(wildcard include/config/have/setup/per/cpu/area.h) \
   include/linux/pfn.h \
-  /root/linux-jps/arch/arm/include/asm/percpu.h \
+  /home/control/minix5/arch/arm/include/asm/percpu.h \
   include/asm-generic/percpu.h \
   include/linux/percpu-defs.h \
     $(wildcard include/config/debug/force/weak/per/cpu.h) \
-  /root/linux-jps/arch/arm/include/asm/topology.h \
+  /home/control/minix5/arch/arm/include/asm/topology.h \
   include/asm-generic/topology.h \
   include/linux/mmdebug.h \
     $(wildcard include/config/debug/vm.h) \
@@ -321,20 +321,20 @@ deps_kernel/sched.o := \
     $(wildcard include/config/mm/owner.h) \
     $(wildcard include/config/mmu/notifier.h) \
   include/linux/auxvec.h \
-  /root/linux-jps/arch/arm/include/asm/auxvec.h \
+  /home/control/minix5/arch/arm/include/asm/auxvec.h \
   include/linux/completion.h \
   include/linux/page-debug-flags.h \
     $(wildcard include/config/page/poisoning.h) \
     $(wildcard include/config/page/debug/something/else.h) \
-  /root/linux-jps/arch/arm/include/asm/mmu.h \
+  /home/control/minix5/arch/arm/include/asm/mmu.h \
     $(wildcard include/config/cpu/has/asid.h) \
   include/linux/range.h \
   include/linux/bit_spinlock.h \
-  /root/linux-jps/arch/arm/include/asm/pgtable.h \
+  /home/control/minix5/arch/arm/include/asm/pgtable.h \
     $(wildcard include/config/highpte.h) \
   include/asm-generic/4level-fixup.h \
-  /root/linux-jps/arch/arm/include/asm/proc-fns.h \
-  /root/linux-jps/arch/arm/include/asm/glue-proc.h \
+  /home/control/minix5/arch/arm/include/asm/proc-fns.h \
+  /home/control/minix5/arch/arm/include/asm/glue-proc.h \
     $(wildcard include/config/cpu/arm610.h) \
     $(wildcard include/config/cpu/arm7tdmi.h) \
     $(wildcard include/config/cpu/arm710.h) \
@@ -356,7 +356,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/cpu/v6k.h) \
     $(wildcard include/config/cpu/v7.h) \
   arch/arm/mach-rk30/include/mach/vmalloc.h \
-  /root/linux-jps/arch/arm/include/asm/pgtable-hwdef.h \
+  /home/control/minix5/arch/arm/include/asm/pgtable-hwdef.h \
   include/asm-generic/pgtable.h \
   include/linux/page-flags.h \
     $(wildcard include/config/pageflags/extended.h) \
@@ -380,7 +380,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/constructors.h) \
     $(wildcard include/config/debug/set/module/ronx.h) \
   include/linux/stat.h \
-  /root/linux-jps/arch/arm/include/asm/stat.h \
+  /home/control/minix5/arch/arm/include/asm/stat.h \
   include/linux/time.h \
     $(wildcard include/config/arch/uses/gettimeoffset.h) \
   include/linux/math64.h \
@@ -396,9 +396,9 @@ deps_kernel/sched.o := \
   include/linux/jiffies.h \
   include/linux/timex.h \
   include/linux/param.h \
-  /root/linux-jps/arch/arm/include/asm/param.h \
+  /home/control/minix5/arch/arm/include/asm/param.h \
     $(wildcard include/config/hz.h) \
-  /root/linux-jps/arch/arm/include/asm/timex.h \
+  /home/control/minix5/arch/arm/include/asm/timex.h \
   arch/arm/mach-rk30/include/mach/timex.h \
   include/linux/debugobjects.h \
     $(wildcard include/config/debug/objects.h) \
@@ -416,8 +416,8 @@ deps_kernel/sched.o := \
   include/linux/rcutree.h \
   include/linux/elf.h \
   include/linux/elf-em.h \
-  /root/linux-jps/arch/arm/include/asm/elf.h \
-  /root/linux-jps/arch/arm/include/asm/user.h \
+  /home/control/minix5/arch/arm/include/asm/elf.h \
+  /home/control/minix5/arch/arm/include/asm/user.h \
   include/linux/kobject.h \
   include/linux/sysfs.h \
   include/linux/kobject_ns.h \
@@ -428,7 +428,7 @@ deps_kernel/sched.o := \
   include/linux/tracepoint.h \
   include/linux/jump_label.h \
     $(wildcard include/config/jump/label.h) \
-  /root/linux-jps/arch/arm/include/asm/module.h \
+  /home/control/minix5/arch/arm/include/asm/module.h \
     $(wildcard include/config/arm/unwind.h) \
   include/trace/events/module.h \
   include/trace/define_trace.h \
@@ -463,17 +463,17 @@ deps_kernel/sched.o := \
     $(wildcard include/config/latencytop.h) \
     $(wildcard include/config/have/unstable/sched/clock.h) \
   include/linux/capability.h \
-  /root/linux-jps/arch/arm/include/asm/cputime.h \
+  /home/control/minix5/arch/arm/include/asm/cputime.h \
   include/asm-generic/cputime.h \
   include/linux/sem.h \
   include/linux/ipc.h \
-  /root/linux-jps/arch/arm/include/asm/ipcbuf.h \
-  /root/linux-jps/arch/arm/include/asm/sembuf.h \
+  /home/control/minix5/arch/arm/include/asm/ipcbuf.h \
+  /home/control/minix5/arch/arm/include/asm/sembuf.h \
   include/linux/signal.h \
-  /root/linux-jps/arch/arm/include/asm/signal.h \
+  /home/control/minix5/arch/arm/include/asm/signal.h \
   include/asm-generic/signal-defs.h \
-  /root/linux-jps/arch/arm/include/asm/sigcontext.h \
-  /root/linux-jps/arch/arm/include/asm/siginfo.h \
+  /home/control/minix5/arch/arm/include/asm/sigcontext.h \
+  /home/control/minix5/arch/arm/include/asm/siginfo.h \
   include/asm-generic/siginfo.h \
   include/linux/pid.h \
   include/linux/proportions.h \
@@ -486,7 +486,7 @@ deps_kernel/sched.o := \
   include/linux/plist.h \
     $(wildcard include/config/debug/pi/list.h) \
   include/linux/resource.h \
-  /root/linux-jps/arch/arm/include/asm/resource.h \
+  /home/control/minix5/arch/arm/include/asm/resource.h \
   include/asm-generic/resource.h \
   include/linux/hrtimer.h \
     $(wildcard include/config/high/res/timers.h) \
@@ -505,11 +505,11 @@ deps_kernel/sched.o := \
   include/linux/aio.h \
   include/linux/aio_abi.h \
   include/linux/uio.h \
-  /root/linux-jps/arch/arm/include/asm/irq.h \
+  /home/control/minix5/arch/arm/include/asm/irq.h \
   arch/arm/mach-rk30/include/mach/irqs.h \
   include/linux/uaccess.h \
-  /root/linux-jps/arch/arm/include/asm/uaccess.h \
-  /root/linux-jps/arch/arm/include/asm/unified.h \
+  /home/control/minix5/arch/arm/include/asm/uaccess.h \
+  /home/control/minix5/arch/arm/include/asm/unified.h \
     $(wildcard include/config/arm/asm/unified.h) \
   include/linux/highmem.h \
     $(wildcard include/config/x86/32.h) \
@@ -525,7 +525,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/migration.h) \
   include/linux/limits.h \
   include/linux/ioctl.h \
-  /root/linux-jps/arch/arm/include/asm/ioctl.h \
+  /home/control/minix5/arch/arm/include/asm/ioctl.h \
   include/asm-generic/ioctl.h \
   include/linux/blk_types.h \
     $(wildcard include/config/blk/dev/integrity.h) \
@@ -548,30 +548,30 @@ deps_kernel/sched.o := \
   include/linux/sunrpc/msg_prot.h \
   include/linux/inet.h \
   include/linux/fcntl.h \
-  /root/linux-jps/arch/arm/include/asm/fcntl.h \
+  /home/control/minix5/arch/arm/include/asm/fcntl.h \
   include/asm-generic/fcntl.h \
   include/linux/err.h \
   include/linux/hardirq.h \
   include/linux/ftrace_irq.h \
     $(wildcard include/config/ftrace/nmi/enter.h) \
-  /root/linux-jps/arch/arm/include/asm/hardirq.h \
+  /home/control/minix5/arch/arm/include/asm/hardirq.h \
     $(wildcard include/config/local/timers.h) \
   include/linux/irq_cpustat.h \
-  /root/linux-jps/arch/arm/include/asm/cacheflush.h \
+  /home/control/minix5/arch/arm/include/asm/cacheflush.h \
     $(wildcard include/config/smp/on/up.h) \
     $(wildcard include/config/arm/errata/411920.h) \
     $(wildcard include/config/cpu/cache/vipt.h) \
-  /root/linux-jps/arch/arm/include/asm/glue-cache.h \
+  /home/control/minix5/arch/arm/include/asm/glue-cache.h \
     $(wildcard include/config/cpu/cache/v3.h) \
     $(wildcard include/config/cpu/cache/v4.h) \
     $(wildcard include/config/cpu/cache/v4wb.h) \
-  /root/linux-jps/arch/arm/include/asm/shmparam.h \
-  /root/linux-jps/arch/arm/include/asm/cachetype.h \
+  /home/control/minix5/arch/arm/include/asm/shmparam.h \
+  /home/control/minix5/arch/arm/include/asm/cachetype.h \
     $(wildcard include/config/cpu/cache/vivt.h) \
-  /root/linux-jps/arch/arm/include/asm/kmap_types.h \
-  /root/linux-jps/arch/arm/include/asm/highmem.h \
+  /home/control/minix5/arch/arm/include/asm/kmap_types.h \
+  /home/control/minix5/arch/arm/include/asm/highmem.h \
     $(wildcard include/config/cpu/tlb/v6.h) \
-  /root/linux-jps/arch/arm/include/asm/mmu_context.h \
+  /home/control/minix5/arch/arm/include/asm/mmu_context.h \
   include/linux/interrupt.h \
     $(wildcard include/config/pm/sleep.h) \
     $(wildcard include/config/irq/forced/threading.h) \
@@ -583,12 +583,12 @@ deps_kernel/sched.o := \
   include/linux/irq.h \
     $(wildcard include/config/irq/release/method.h) \
     $(wildcard include/config/generic/pending/irq.h) \
-  /root/linux-jps/arch/arm/include/asm/irq_regs.h \
+  /home/control/minix5/arch/arm/include/asm/irq_regs.h \
   include/asm-generic/irq_regs.h \
   include/linux/irqdesc.h \
     $(wildcard include/config/irq/preflow/fasteoi.h) \
     $(wildcard include/config/sparse/irq.h) \
-  /root/linux-jps/arch/arm/include/asm/hw_irq.h \
+  /home/control/minix5/arch/arm/include/asm/hw_irq.h \
   include/linux/perf_event.h \
     $(wildcard include/config/perf/use/vmalloc.h) \
     $(wildcard include/config/cgroup/perf.h) \
@@ -603,8 +603,8 @@ deps_kernel/sched.o := \
     $(wildcard include/config/cgroup/freezer.h) \
     $(wildcard include/config/net/cls/cgroup.h) \
     $(wildcard include/config/blk/cgroup.h) \
-  /root/linux-jps/arch/arm/include/asm/perf_event.h \
-  /root/linux-jps/arch/arm/include/asm/local64.h \
+  /home/control/minix5/arch/arm/include/asm/perf_event.h \
+  /home/control/minix5/arch/arm/include/asm/local64.h \
   include/asm-generic/local64.h \
   include/linux/pid_namespace.h \
     $(wildcard include/config/pid/ns.h) \
@@ -617,7 +617,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/ftrace/syscalls.h) \
   include/linux/trace_clock.h \
   include/linux/kallsyms.h \
-  /root/linux-jps/arch/arm/include/asm/ftrace.h \
+  /home/control/minix5/arch/arm/include/asm/ftrace.h \
     $(wildcard include/config/old/mcount.h) \
   include/linux/cpu.h \
     $(wildcard include/config/arch/cpu/probe/release.h) \
@@ -629,7 +629,7 @@ deps_kernel/sched.o := \
   include/linux/node.h \
     $(wildcard include/config/memory/hotplug/sparse.h) \
   include/linux/irq_work.h \
-  /root/linux-jps/arch/arm/include/asm/local.h \
+  /home/control/minix5/arch/arm/include/asm/local.h \
   include/asm-generic/local.h \
   include/linux/security.h \
     $(wildcard include/config/security/path.h) \
@@ -655,9 +655,9 @@ deps_kernel/sched.o := \
     $(wildcard include/config/debug/kmemleak.h) \
   include/linux/binfmts.h \
   include/linux/shm.h \
-  /root/linux-jps/arch/arm/include/asm/shmbuf.h \
+  /home/control/minix5/arch/arm/include/asm/shmbuf.h \
   include/linux/msg.h \
-  /root/linux-jps/arch/arm/include/asm/msgbuf.h \
+  /home/control/minix5/arch/arm/include/asm/msgbuf.h \
   include/linux/xfrm.h \
   include/net/flow.h \
   include/linux/in6.h \
@@ -682,7 +682,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/sysfs/deprecated.h) \
   include/linux/ioport.h \
   include/linux/klist.h \
-  /root/linux-jps/arch/arm/include/asm/device.h \
+  /home/control/minix5/arch/arm/include/asm/device.h \
     $(wildcard include/config/dmabounce.h) \
   include/linux/pm_wakeup.h \
   include/linux/pagemap.h \
@@ -694,15 +694,15 @@ deps_kernel/sched.o := \
   include/linux/bio.h \
   include/linux/ioprio.h \
   include/linux/iocontext.h \
-  /root/linux-jps/arch/arm/include/asm/io.h \
+  /home/control/minix5/arch/arm/include/asm/io.h \
   include/linux/bsg.h \
-  /root/linux-jps/arch/arm/include/asm/scatterlist.h \
+  /home/control/minix5/arch/arm/include/asm/scatterlist.h \
   include/asm-generic/scatterlist.h \
     $(wildcard include/config/debug/sg.h) \
     $(wildcard include/config/need/sg/dma/length.h) \
   include/linux/elevator.h \
   include/linux/delay.h \
-  /root/linux-jps/arch/arm/include/asm/delay.h \
+  /home/control/minix5/arch/arm/include/asm/delay.h \
   include/linux/cpuset.h \
   include/linux/proc_fs.h \
     $(wildcard include/config/proc/devicetree.h) \
@@ -715,7 +715,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/mips.h) \
     $(wildcard include/config/have/syscall/wrappers.h) \
   include/linux/unistd.h \
-  /root/linux-jps/arch/arm/include/asm/unistd.h \
+  /home/control/minix5/arch/arm/include/asm/unistd.h \
     $(wildcard include/config/oabi/compat.h) \
   include/trace/syscall.h \
   include/linux/ftrace_event.h \
@@ -743,14 +743,14 @@ deps_kernel/sched.o := \
   include/linux/debugfs.h \
   include/linux/ctype.h \
   include/linux/cpuacct.h \
-  /root/linux-jps/arch/arm/include/asm/tlb.h \
+  /home/control/minix5/arch/arm/include/asm/tlb.h \
     $(wildcard include/config/cpu/32v7.h) \
   include/linux/swap.h \
     $(wildcard include/config/cgroup/mem/res/ctlr/swap.h) \
   include/linux/memcontrol.h \
     $(wildcard include/config/cgroup/mem/cont.h) \
-  /root/linux-jps/arch/arm/include/asm/pgalloc.h \
-  /root/linux-jps/arch/arm/include/asm/tlbflush.h \
+  /home/control/minix5/arch/arm/include/asm/pgalloc.h \
+  /home/control/minix5/arch/arm/include/asm/tlbflush.h \
     $(wildcard include/config/cpu/tlb/v3.h) \
     $(wildcard include/config/cpu/tlb/v4wt.h) \
     $(wildcard include/config/cpu/tlb/fa.h) \
@@ -759,7 +759,7 @@ deps_kernel/sched.o := \
     $(wildcard include/config/cpu/tlb/v4wb.h) \
     $(wildcard include/config/cpu/tlb/v7.h) \
     $(wildcard include/config/arm/errata/720789.h) \
-  /root/linux-jps/arch/arm/include/asm/mutex.h \
+  /home/control/minix5/arch/arm/include/asm/mutex.h \
   kernel/sched_cpupri.h \
   kernel/workqueue_sched.h \
   kernel/sched_autogroup.h \
